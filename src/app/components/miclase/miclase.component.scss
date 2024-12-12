@@ -1,0 +1,36 @@
+.datos-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  thead {
+    background-color: #007bff; // Cambia el color según tu tema
+    color: white;
+
+    th {
+      padding: 10px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f2f2f2; // Color de fondo alternativo para filas
+      }
+
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd; // Línea divisoria entre filas
+        font-size: 1em;
+      }
+
+      // Cambiar el color de las celdas al pasar el ratón
+      &:hover {
+        background-color: #e7f3ff; // Color al pasar el mouse
+      }
+    }
+  }
+}

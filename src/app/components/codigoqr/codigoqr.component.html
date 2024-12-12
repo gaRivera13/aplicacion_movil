@@ -1,0 +1,19 @@
+<ion-content>
+    <div class="ion-text-center contenedor-principal">
+        <!-- Botón de Detener Escaneo -->
+        <ion-button class="stop-button" (click)="detenerEscaneoQR()" shape="round" size="large" class="boton-accion">
+            <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
+            {{ 'Header.ScanButton.StopScanning' | translate }}
+        </ion-button>
+
+        <!-- Contenedor del Video con efectos -->
+        <div class="frame">
+            <video class="video" #video></video>
+            <div class="qr-overlay"></div>
+            <div class="moving-horizontal-line"></div>
+        </div>
+
+        <!-- Canvas oculto para el escaneo QR -->
+        <canvas #canvas hidden></canvas>
+    </div>
+</ion-content>

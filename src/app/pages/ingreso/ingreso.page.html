@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg">
+    <div slot="start" class="ion-margin">
+      <app-language #selectLanguage></app-language>
+    </div>
+    <div class="show-in-landscape">
+      <h1 class="glow-text"> {{ 'AppName' | translate }} </h1>
+    </div>
+    <div slot="end" class="ion-margin">
+      <ion-button shape="round" size="small" (click)="navigateTheme()">
+        {{ 'Login.Title.Theme' | translate }}
+        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+      </ion-button>
+    </div>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false"> 
+  <img class="background-image" src="../../../assets/images/pao.jpg" alt="">
+  <div class="centrar">
+    <div class="center-container">
+      <div class="ion-padding-vertical">
+        <ion-card class="enmarcar" style="background-color: #ffffff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+          <img alt="DUOC" src="../../../assets/images/Logo_DuocUC.svg.png" class="centrar"/>
+          <ion-card-content>
+            <h3 style="color: black;" class="centrar">{{ 'Login.Title.Login' | translate }}</h3>
+            <ion-item class="margin-bottom-6 float-left-landscape">
+              <ion-input 
+                id="cuenta"
+                label="{{ 'Login.Label.Account' | translate }}" 
+                labelPlacement="floating"
+                [(ngModel)]="cuenta" 
+                placeholder="{{ 'Login.Placeholder.Account' | translate }}">
+              </ion-input>
+            </ion-item>
+            
+            <ion-item class="margin-bottom-6 float-right-landscape">
+              <ion-input 
+                id="password"
+                label="{{ 'Login.Label.Password' | translate }}"
+                labelPlacement="floating"
+                [(ngModel)]="password" 
+                placeholder="{{ 'Login.Placeholder.Password' | translate }}"
+                type="password">
+              </ion-input>
+            </ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col class="centrar">
+                  <ion-button id="Iniciar Sesión" shape="round" size="medium" (click)="ingresar()">
+                    <ion-icon name="person-circle"></ion-icon>
+                    {{ 'Login.Button.Login' | translate }}
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-label class="centrar">
+                <a [routerLink]="['/correo']">{{ 'Login.Button.ForgotPassword' | translate }}</a>
+              </ion-label>
+              <ion-label class="centrar">
+                <a [routerLink]="['/miruta']">{{ 'Login.Button.gps' | translate }}</a>
+              </ion-label>
+              <ion-label class="centrar">
+                <a [routerLink]="['/registrarme']">{{ 'Login.Button.Register' | translate }}</a>
+              </ion-label>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

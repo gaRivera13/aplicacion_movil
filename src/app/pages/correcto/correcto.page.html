@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="false">
+    <img class="background-image" src="../../../assets/images/pao.jpg" alt="Background Image">
+    <div class="centrar">
+        <div class="center-container ion-padding-vertical">
+
+            <!-- Card Container -->
+            <ion-card class="enmarcar" style="background-color: #ffffff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+                <!-- Logo -->
+                <img alt="DUOC" src="../../../assets/images/Logo_DuocUC.svg.png" class="centrar" />
+                <ion-card-content>
+                    <h2 style="color: black;">{{ 'PasswordRecovery.Title' | translate }}</h2>
+                    <!-- New Image Space -->
+                    <img src="assets/images/hombre-feliz.jpg" class="centrar" />
+                    <h3 class="centrar" style="color: black;">{{ 'PasswordRecovery.true' | translate }}</h3>
+                    <ion-card-header class="centrar" style="background-color: #021623; color: #ffffff; border-radius: 0px; padding: 1em; height: auto; display: flex; justify-content: center; align-items: center;">
+                        <ion-label style="font-size: 2em; font-weight: bold; color: #ffffff;">{{ password }}</ion-label>
+                    </ion-card-header>
+
+                    <ion-grid>
+                        <ion-row>
+                        </ion-row>
+                    </ion-grid>
+                    <ion-label class="centrar">
+                        <a [routerLink]="['/ingreso']">{{ 'PasswordRecovery.GoBack' | translate }}</a>
+                    </ion-label>
+                </ion-card-content>
+            </ion-card>
+        </div>
+    </div>
+</ion-content>

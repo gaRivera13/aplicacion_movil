@@ -1,0 +1,43 @@
+.ion-text-center {
+    color: black;
+    display: flex;
+    /* Define un contenedor Flexbox */
+    justify-content: center;
+    /* Centra el contenido horizontalmente dentro del contenedor */
+    align-items: center;
+    /* Centra el contenido verticalmente dentro del contenedor */
+    height: 100%;
+    /* Hace que el contenedor ocupe el 100% de la altura del elemento padre */
+    padding: 10px;
+    /* Agrega un espacio de 20px alrededor del contenido */
+    text-align: center;
+}
+
+.contenedor-bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida-titulo {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    /* Color verde suave */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.nombre-usuario {
+    font-size: 1.8rem;
+    color: #333;
+    /* Color gris oscuro */
+    font-weight: 400;
+    margin-top: 10px;
+    font-style: italic;
+}

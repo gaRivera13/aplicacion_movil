@@ -1,0 +1,62 @@
+<div class="center-container">
+    <ion-card>
+        <h2 *ngIf="!clase" class="centrar">
+            {{ 'NO_INFORMATION' | translate }}
+        </h2>
+        <div *ngIf="clase">
+            <h2 class="centrar">{{ 'PRESENT_IN_CLASS' | translate }}</h2>
+            <ion-card-content class="borde">
+                <table class="datos-tabla">
+                    <thead>
+                        <tr>
+                            <th>{{ 'INFORMATION' | translate }}</th>
+                            <th>{{ 'DETAILS' | translate }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ 'START_BLOCK' | translate }}</td>
+                            <td>{{ clase.bloqueInicio }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'END_BLOCK' | translate }}</td>
+                            <td>{{ clase.bloqueTermino }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'DAY' | translate }}</td>
+                            <td>{{ clase.dia }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'END_TIME' | translate }}</td>
+                            <td>{{ clase.horaFin }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'START_TIME' | translate }}</td>
+                            <td>{{ clase.horaInicio }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'SUBJECT_CODE' | translate }}</td>
+                            <td>{{ clase.idAsignatura }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'SUBJECT_NAME' | translate }}</td>
+                            <td>{{ clase.nombreAsignatura }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PROFESSOR_NAME' | translate }}</td>
+                            <td>{{ clase.nombreProfesor }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'SECTION' | translate }}</td>
+                            <td>{{ clase.seccion }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'CAMPUS' | translate }}</td>
+                            <td>{{ clase.sede }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ion-card-content>
+        </div>
+    </ion-card>
+</div>

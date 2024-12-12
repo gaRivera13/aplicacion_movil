@@ -1,0 +1,125 @@
+ion-header {
+  ion-toolbar {
+    --background: #021623; /* Set the background color */
+    ion-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #FFFFFF; /* Text color */
+    }
+  }
+}
+.Mis-datos {
+  font-size: 1.5em; /* Ajustar el tamaño de la cabecera */
+  background-color: #fff;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 30px !important;
+  font-weight: bold !important; 
+}
+
+ion-content {
+  --background: white; /* Background color */
+}
+
+h1 {
+  font-size: 30px;
+  color: black; /* Title color */
+}
+
+h4 {
+  color: gray; /* Subtitle color */
+}
+
+ion-card {
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --background: white; /* Background color */
+  border: 1px solid #021623; /* Border color */
+}
+
+ion-item {
+  margin-bottom: 10px;
+  --background: white; /* Background color */
+  color: black; /* Text color */
+}
+
+ion-button {
+  margin: 5px;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+}
+
+.menu-item {
+  color: black;
+  --background: #FFFFFF;
+
+  ion-icon {
+    color: black;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: blue !important;
+    --background: black;
+
+    ion-icon {
+      color: white;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .center-container {
+    height: 80%; /* Adjust height */
+    width: 80%; /* Adjust width */
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.marco {
+  width: 90%; /* Ajustar el ancho para pantallas más pequeñas */
+  padding: 20px;
+  background-color: #fff; /* Fondo blanco */
+  border: 2px solid #000; /* Contorno negro */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px auto; /* Centrar horizontalmente */
+}
+
+/* Estilo para los inputs y selectores dentro del formulario */
+ion-input, ion-select, ion-textarea {
+  border: 1px solid #ccc; /* Borde claro para inputs y selectores */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Estilo para el botón centrado */
+.centrar {
+  display: flex;
+  justify-content: center; /* Centrar los botones */
+  margin-top: 20px; /* Margen superior para separar de los inputs */
+}
+
+/* Ajustes para el texto dentro de los labels y los inputs */
+ion-label {
+  color: #000; /* Color negro para etiquetas */
+}
+
+ion-button {
+  margin: 0 10px; /* Espaciado entre botones */
+}
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .mat-input-element {
+    font-size: 1rem; /* Font size adjustment */
+  }

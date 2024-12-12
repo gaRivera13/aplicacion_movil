@@ -1,0 +1,30 @@
+.titulo-centrado {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem; /* Aumenta el tamaño de la fuente para el título */
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alinear-derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Espaciado entre las tarjetas */
+ion-card {
+  margin: 10px;
+}
+
+/* Mejora del estilo de los botones */
+ion-button {
+  margin: 5px;
+}
+
+ion-content {
+  --background: white;
+}

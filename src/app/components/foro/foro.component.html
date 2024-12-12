@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title class="centrar">{{ 'POSTS' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+    <a #topOfPage href="#topOfPage"></a>
+
+    <!-- Formulario para ingresar publicación -->
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title class="titulo-centrado">{{ 'ENTER_YOUR_POST' | translate }}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-item class="ion-padding-horizontal">
+                <ion-input id="titulo" [(ngModel)]="publicacion.titulo" [label]="'TITLE' | translate" labelPlacement="floating" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item class="ion-padding-horizontal">
+                <ion-textarea id="contenido" [(ngModel)]="publicacion.contenido" [label]="'DESCRIPTION' | translate" labelPlacement="floating" required>
+                </ion-textarea>
+            </ion-item>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col class="centrar">
+                        <ion-button shape="round" size="small" (click)="limpiarPublicacion()">
+                            <ion-icon name="trash"></ion-icon>
+                            {{ 'CLEAR.FORUM' | translate }}
+                        </ion-button>
+
+                        <ion-button shape="round" size="small" (click)="guardarPublicacion()">
+                            <ion-icon name="save"></ion-icon>
+                            {{ 'SAVE' | translate }}
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+
+    <!-- Lista de publicaciones recientes -->
+    <ion-card>
+        <ion-card-title class="titulo-centrado">{{ 'RECENT_POSTS' | translate }}</ion-card-title>
+    </ion-card>
+
+    <ion-card *ngFor="let pub of publicaciones">
+        <ion-card-header>
+            <ion-card-subtitle class="subtitulo">#{{ pub.id }}: {{ pub.titulo }}</ion-card-subtitle>
+            <ion-card-subtitle class="autor">{{ 'AUTHOR' | translate }}: {{ pub.nombre }} {{ pub.apellido }}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            {{ pub.contenido }}
+        </ion-card-content>
+
+        <div class="alinear-derecha">
+            <ion-button shape="round" size="small" (click)="editarPublicacion(pub)">
+                <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+            </ion-button>
+
+            <ion-button id="eliminar" shape="round" size="small" (click)="eliminarPublicacion(pub)">
+                <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+            </ion-button>
+        </div>
+    </ion-card>
+</ion-content>

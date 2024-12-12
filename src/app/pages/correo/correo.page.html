@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="false">
+    <img class="background-image" src="../../../assets/images/pao.jpg" alt="">
+    <div class="centrar">
+        <div class="center-container">
+            <div class="ion-padding-vertical">
+                <ion-card class="enmarcar" style="background-color: #ffffff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+                    <img alt="DUOC" src="../../../assets/images/Logo_DuocUC.svg.png" class="centrar" />
+                    <ion-card-content>
+                        <h2 style="color: black;">{{ 'PasswordRecovery.Title' | translate }}</h2>
+                        <h3 style="color: black;">{{ 'PasswordRecovery.Step1' | translate }}</h3>
+
+                        <br>
+                        <!-- Formulario para ingresar el correo -->
+                        <form #correoForm="ngForm">
+                            <ion-item class="margin-bottom-6">
+                                <ion-input type="email" [(ngModel)]="correo" name="correo" [label]="'PasswordRecovery.EmailLabel' | translate" labelPlacement="floating" required="true">
+                                </ion-input>
+                            </ion-item>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col class="centrar">
+                                        <ion-button shape="round" size="medium" (click)="recuperarContrasena(correoForm)">
+                                            <ion-icon name="refresh-outline"></ion-icon>
+                                            {{ 'PasswordRecovery.RecoverButton' | translate }}
+                                        </ion-button>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </form>
+                        <ion-label class="centrar">
+                            <a [routerLink]="['/ingreso']">{{ 'PasswordRecovery.GoBack' | translate }}</a>
+
+                        </ion-label>
+                    </ion-card-content>
+                </ion-card>
+            </div>
+        </div>
+    </div>
+</ion-content>

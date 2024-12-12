@@ -1,0 +1,93 @@
+.titulo {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    /* Espacio entre el título y los botones */
+    color: #333;
+    /* Color oscuro para mayor contraste */
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* Fondo suave */
+}
+
+.boton-accion {
+    margin-top: 20px;
+    background-color: #007bff;
+    /* Color de fondo de botón */
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    /* Botón redondeado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.boton-accion:hover {
+    background-color: #0056b3;
+    /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+.frame {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    /* Tamaño máximo del área de la cámara */
+    height: 300px;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qr-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    border-radius: 10px;
+    pointer-events: none;
+    /* Permite interactuar con el video debajo */
+}
+
+.moving-horizontal-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 255, 0, 0.8);
+    animation: moveLine 1.5s infinite linear;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Para no interferir con la interacción */
+}
+
+@keyframes moveLine {
+    0% {
+        top: 0%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 100%;
+    }
+}

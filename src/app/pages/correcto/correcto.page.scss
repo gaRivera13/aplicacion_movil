@@ -1,0 +1,101 @@
+ion-content{
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+}
+
+ion-item{
+  --padding-bottom: 10px;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+@media screen and (orientation: landscape) {
+  .center-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    height: 80%;           /* Ocupa toda la altura de la pantalla */
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .foto-portada {
+    width: 50%;
+    margin-top: 40px;
+  }
+}
+
+.centrar {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+
+
+.ion-card-header {
+  background-color: #021623;
+  color: #ffffff;
+  border-radius: 200px;
+  padding: 1em; /* ajusta el padding para que el texto tenga espacio suficiente */
+  height: 60px; /* establece la altura en automático */
+  display: flex; /* convierte el contenedor en un contenedor flexible */
+  justify-content: center; /* centra el contenido horizontalmente */
+  align-items: center; /* centra el contenido verticalmente */
+}
+
+.fondo {
+  //background-image: url('../../../assets/images/pao.jpg');
+  // background-size: cover; /* Forzar que la imagen se escale al 100% del contenedor */
+  // background-position: center; /* Centrar la imagen */
+  // width: 7000px;
+  // height: 775px; /* Asegura que el contenedor cubra la pantalla */
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  position: fixed; /* Fija la imagen al fondo de la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen cubra el área sin distorsión */
+  object-position: center; /* Centra la imagen */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+// ESTO SE USA PARA LA PARTE DE PORTA RETRATO VERTICAL
+@media screen and (orientation: portrait) {
+  .login-container {
+    width: 300px;
+    margin: 0 auto; /* Centra el input en vertical */
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .login-container {
+    width: 300px;
+    margin: 0 auto; /* Centra el input en horizontal */
+  }
+
+  .float-left-landscape {
+    float: left;
+  }
+
+  .float-right-landscape {
+    float: right;
+  }
+
+  ion-button{
+    margin-top: 90px;
+  }
+
+}
+
+

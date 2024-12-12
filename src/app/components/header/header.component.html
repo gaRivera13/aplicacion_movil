@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title class="centrar">
+            <h3 #titulo class="margin-top-6">
+                <img src="../../../assets/images/logo_duoc.png" alt="">
+            </h3>
+        </ion-title>
+
+        <div slot="end">
+            <ion-button *ngIf="!isAdmin()" (click)="sendClickEvent('scan')" size="small" fill="clear">
+                <ion-icon name="qr-code-outline" color="light"></ion-icon>
+            </ion-button>
+
+            <ion-button id="logout" fill="clear" size="small" icon-only (click)="logout()">
+                <ion-icon name="log-out-outline" color="light"></ion-icon>
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-header>

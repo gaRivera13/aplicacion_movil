@@ -1,0 +1,71 @@
+<div class="marco">
+    <!-- Título centrado -->
+    <h5 class="Mis-datos">{{ 'Mis-datos' | translate }}</h5>
+    <form #miFormulario="ngForm" (ngSubmit)="actualizarPerfil(miFormulario)">
+
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="usuario.cuenta" name="cuenta" [label]="'ACCOUNT' | translate" labelPlacement="floating" [disabled]="true" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="usuario.correo" name="correo" [label]="'EMAIL' | translate" labelPlacement="floating"  required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input id="nombre" type="text" [(ngModel)]="usuario.nombre" name="nombre" [label]="'NAME' | translate" labelPlacement="floating" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input id="apellido" type="text" [(ngModel)]="usuario.apellido" name="apellido" [label]="'LAST_NAME' | translate" labelPlacement="floating" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating" style="color: black;">{{ 'EDUCATION' | translate }}</ion-label>
+            <ion-select (ionChange)="cambiarNivel($event)" [(ngModel)]="nivelId" name="nivelEducacional" style="color: black;" required>
+                <ion-select-option *ngFor="let nivel of listaNivelesEducacionales" [value]="nivel.id">
+                    {{ nivel.nombre }}
+                </ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-textarea id="Direccion" [(ngModel)]="usuario.direccion" name="direccion" [label]="'ADDRESS' | translate" labelPlacement="floating" required></ion-textarea>
+        </ion-item>
+
+        <ion-item class="ion-item-datepicker">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>{{ 'BIRTH_DATE' | translate }}</mat-label>
+                <input matInput [matDatepicker]="fechaNacimiento" [(ngModel)]="usuario.fechaNacimiento" [ngModelOptions]="{standalone: true}" name="fechaNacimiento" placeholder="dd/mm/yyyy" required>
+                <mat-datepicker-toggle matSuffix [for]="fechaNacimiento"></mat-datepicker-toggle>
+                <mat-datepicker #fechaNacimiento></mat-datepicker>
+            </mat-form-field>
+        </ion-item>
+
+        <ion-item>
+            <ion-input id="pregunta" type="text" [(ngModel)]="usuario.preguntaSecreta" name="preguntaSecreta" [label]="'SECRET_QUESTION' | translate" labelPlacement="floating" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input id="respuesta" type="text" [(ngModel)]="usuario.respuestaSecreta" name="respuestaSecreta" [label]="'SECRET_ANSWER' | translate" labelPlacement="floating" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="password" [(ngModel)]="usuario.password" name="password" [label]="'PASSWORD' | translate" labelPlacement="floating" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="password" [(ngModel)]="repeticionPassword" name="repeticionPassword" [label]="'REPEAT_PASSWORD' | translate" labelPlacement="floating" required></ion-input>
+        </ion-item>
+
+        <br>
+        <div class="centrar">
+            <ion-button type="submit" shape="round" size="medium">
+                <ion-icon name="arrow-down-circle"></ion-icon> {{ 'UPDATE' | translate }}
+            </ion-button>
+            <ion-button (click)="limpiarCampos()" shape="round" size="medium">
+                <ion-icon name="trash"></ion-icon> {{ 'CLEAR' | translate }}
+            </ion-button>
+        </div>
+
+    </form>
+</div>

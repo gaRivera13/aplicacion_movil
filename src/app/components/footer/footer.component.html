@@ -1,0 +1,40 @@
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment
+      value="welcome" 
+      (ionChange)="segmentedChange($event)" 
+      [(ngModel)]="selectedButton" 
+      class="centrar">
+
+      <ion-segment-button value="welcome">
+        <ion-icon name="home-outline"></ion-icon>
+        {{ 'Footer.Button.Welcome' | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button 
+        value="miclase" 
+        *ngIf="!isAdmin()">
+        <ion-icon name="school-outline"></ion-icon>
+        {{ 'Footer.Button.MyClass' | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button value="foro" id="Foro">
+        <ion-icon name="pencil-outline"></ion-icon>
+        {{ 'Footer.Button.Forum' | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button value="misdatos" id="misDatos">
+        <ion-icon name="grid-outline"></ion-icon>
+        {{ 'Footer.Button.MyData' | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button 
+        value="usuarios" 
+        *ngIf="isAdmin()">
+        <ion-icon name="person"></ion-icon>
+        {{ 'Footer.Button.Users' | translate }}
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>
